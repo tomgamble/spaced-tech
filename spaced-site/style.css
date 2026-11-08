@@ -78,3 +78,44 @@
 
 /* Exact app screenshots, used automatically when published under /screenshots/ */
 .showcase-real-screen{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#050507;z-index:3;animation:screen-appear .25s ease both}
+
+/* V3 launch polish: clear status, elegant content rhythm, and accessible details */
+html{scroll-padding-top:90px}
+::selection{background:#929cff;color:#070917}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid #aebcff;outline-offset:4px}
+.site-header{backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+.navlinks a{position:relative;transition:color .2s}
+.navlinks a:after{content:"";position:absolute;bottom:-8px;left:0;width:100%;height:1px;background:#b4baff;transform:scaleX(0);transform-origin:left;transition:transform .22s}
+.navlinks a:hover:after,.navlinks a:focus-visible:after{transform:scaleX(1)}
+.launch-ribbon{position:relative;background:linear-gradient(100deg,#121932 0%,#11122b 65%,#171530 100%);border-bottom:1px solid rgba(152,166,241,.2)}
+.ribbon-inner{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;min-height:49px;padding-top:9px;padding-bottom:9px;color:#c5cbec;font-size:11px;letter-spacing:.025em}
+.ribbon-status{font-weight:850;letter-spacing:.09em;color:#f1f2ff;font-size:10px;display:inline-flex;align-items:center;gap:8px}
+.ribbon-light{width:7px;height:7px;display:inline-block;background:#91a5ff;border-radius:50%;box-shadow:0 0 14px #8b92ff}
+.ribbon-inner a{color:#e2e6ff;font-weight:850;text-decoration:underline;text-underline-offset:4px}
+.journey-section{background:linear-gradient(180deg,#0b0f20,#090b15);position:relative}
+.journey-head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:45px}
+.journey-head h2,.faq-intro h2{font-size:clamp(38px,5vw,68px);letter-spacing:-.064em;line-height:1.07;margin:18px 0 0}
+.journey-head>p{max-width:350px;color:#aeb5d0;margin:0}
+.journey-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.journey-step{position:relative;overflow:hidden;min-height:285px;padding:28px;border-radius:21px;border:1px solid #313750;background:linear-gradient(153deg,#171c31,#101321 75%);transition:border-color .3s,transform .3s}
+.journey-step:hover{border-color:#7584dc;transform:translateY(-5px)}
+.journey-step:after{content:"";position:absolute;right:-60px;top:-65px;width:190px;height:190px;border:1px solid rgba(131,149,255,.12);border-radius:50%;box-shadow:0 0 0 32px rgba(133,145,255,.035),0 0 0 65px rgba(133,145,255,.02)}
+.journey-index{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:850;letter-spacing:.13em;color:#abb8ee}
+.journey-index span{font-size:18px}
+.journey-symbol{font-size:40px;color:#b4bffe;margin:31px 0 20px;line-height:1}
+.journey-step h3{font-size:22px;letter-spacing:-.04em;margin:0 0 10px;position:relative}
+.journey-step p{color:#a0a9c5;font-size:13px;line-height:1.75;max-width:280px;margin:0;position:relative}
+.journey-disclaimer{font-size:11px;color:#8792b2;margin:21px 0 0}
+.faq-section{background:#0c0e1a}
+.faq-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:90px}
+.faq-intro>p{color:#aeb5cc;font-size:15px;margin:25px 0 15px}
+.faq-items{border-top:1px solid #323854}
+.faq-items details{border-bottom:1px solid #323854}
+.faq-items summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:24px 0;color:#edf0fb;font-size:16px;font-weight:750;letter-spacing:-.015em}
+.faq-items summary::-webkit-details-marker{display:none}
+.faq-items summary span{height:27px;width:27px;display:grid;place-items:center;flex:none;border-radius:50%;background:#212840;border:1px solid #414c78;color:#c7d0ff;transition:transform .25s,background .25s}
+.faq-items details[open] summary span{transform:rotate(45deg);background:#394677}
+.faq-items details p{margin:0;padding:0 38px 24px 0;max-width:600px;color:#a9b2cb;font-size:14px;line-height:1.8}
+@media(max-width:900px){.faq-layout{gap:40px}.journey-head{gap:25px}.journey-step{padding:23px}}
+@media(max-width:760px){.ribbon-inner{gap:7px 15px;justify-content:space-between;font-size:10px}.ribbon-inner>span:nth-child(2){order:3;flex-basis:100%;font-size:10px}.journey-head{display:block}.journey-head>p{margin-top:18px}.journey-steps{grid-template-columns:1fr;gap:12px}.journey-step{min-height:0;padding:23px}.journey-symbol{margin:15px 0 13px;font-size:32px}.faq-layout{display:block}.faq-items{margin-top:35px}.faq-items summary{font-size:15px;padding:20px 0}}
+@media(prefers-reduced-motion:reduce){.journey-step{transition:none}.navlinks a:after{transition:none}}

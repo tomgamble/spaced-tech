@@ -75,3 +75,6 @@
 @media(max-width:760px){.showcase-layout,.story-layout{display:block}.showcase-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px}.showcase-tab{padding:15px 10px}.showcase-tab .tab-number{font-size:9px}.showcase-tab strong{font-size:13px}.showcase-tab small{line-height:1.5}.showcase-tab .tab-arrow{display:none}.showcase-detail{margin-top:10px;padding-bottom:0}.showcase-visual{min-height:620px}.showcase-orbit{width:300px;height:300px}.story-content{margin-top:40px}.story-number{font-size:80px}.story-signoff{font-size:9px}}
 @media(max-width:420px){.showcase-tab{align-items:start}.showcase-tab .tab-number{margin-top:2px}.showcase-device{transform:scale(.91) rotate(3deg)}.showcase-device:hover{transform:scale(.91) rotate(0deg)}.showcase-visual{min-height:580px}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.showcase-dynamic.is-visible{animation:none}.showcase-tab,.feature-card{transition:none}}
+
+/* Exact app screenshots, used automatically when published under /screenshots/ */
+.showcase-real-screen{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#050507;z-index:3;animation:screen-appear .25s ease both}

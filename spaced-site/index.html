@@ -108,6 +108,16 @@
         preview.classList.remove('is-visible');
         preview.innerHTML = '<div class="preview-status"><span>9:41</span><span>●●● ▰</span></div><div class="preview-heading">' + item.title + '</div><div class="preview-tagline">' + item.tagline + '</div>' + item.content + '<div class="preview-bottom"><span>⌂ Home</span><span>▥ Meters</span><span>◎ Explore</span></div>';
         preview.classList.add('is-visible');
+        // When real screenshot assets are available, display them instead of the
+        // representative HTML preview. Missing files leave the HTML intact.
+        const screenshot = new Image();
+        screenshot.alt = 'Actual SPACED ' + id + ' app screen';
+        screenshot.className = 'showcase-real-screen';
+        screenshot.onload = () => {
+          if (document.querySelector('.showcase-tab.active')?.dataset.screen !== id) return;
+          preview.appendChild(screenshot);
+        };
+        screenshot.src = '/screenshots/' + id + '.webp';
         description.textContent = item.description;
         tabs.forEach(tab => { const active = tab.dataset.screen === id; tab.classList.toggle('active',active);tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1; });
       };
